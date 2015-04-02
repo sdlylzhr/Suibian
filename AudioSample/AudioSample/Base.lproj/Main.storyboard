@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sxz-48-qB2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="D22-jz-8qZ">
+            <objects>
+                <navigationController id="Sxz-48-qB2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="okv-au-wTQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="beH-KY-8CF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VmR-IX-L2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="248"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6Y-PW-1R1">
+                                <rect key="frame" x="285" y="198" width="30" height="30"/>
+                                <state key="normal" title="play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="beginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mqk-e7-ghA"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ri5-GD-GTX">
+                                <rect key="frame" x="119" y="327" width="362" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="qIJ-wc-49f"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="seekSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="AJf-3Y-kLE"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmr-oz-fUZ">
+                                <rect key="frame" x="374" y="198" width="31" height="30"/>
+                                <state key="normal" title="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wkh-DH-LaB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1i-kf-mJq">
+                                <rect key="frame" x="279" y="384" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zZU-ih-REu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lex-xP-ZhA">
+                                <rect key="frame" x="188" y="198" width="42" height="30"/>
+                                <state key="normal" title="pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PCG-o5-ZeV"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tqI-T2-5Ze">
+                                <rect key="frame" x="193" y="435" width="214" height="31"/>
+                                <connections>
+                                    <action selector="volumeSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="bNk-dZ-ANw"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="muted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p65-P7-coe">
+                                <rect key="frame" x="89" y="123" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZsD-fm-xOs">
+                                <rect key="frame" x="155" y="118" width="51" height="31"/>
+                                <connections>
+                                    <action selector="muteSwich:" destination="vXZ-lx-hvc" eventType="valueChanged" id="xzB-4G-3Qz"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ri5-GD-GTX" firstAttribute="centerX" secondItem="x6Y-PW-1R1" secondAttribute="centerX" id="5PK-Fa-kHK"/>
+                            <constraint firstItem="x6Y-PW-1R1" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="7Yw-KO-UkF"/>
+                            <constraint firstItem="h1i-kf-mJq" firstAttribute="top" secondItem="Ri5-GD-GTX" secondAttribute="bottom" constant="27" id="98v-0t-S2e"/>
+                            <constraint firstItem="Ri5-GD-GTX" firstAttribute="centerX" secondItem="h1i-kf-mJq" secondAttribute="centerX" id="Dqy-oB-Crj"/>
+                            <constraint firstItem="lex-xP-ZhA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="134" id="Tty-Yd-4J7"/>
+                            <constraint firstItem="Ri5-GD-GTX" firstAttribute="top" secondItem="lex-xP-ZhA" secondAttribute="bottom" constant="99" id="VvI-Wy-naK"/>
+                            <constraint firstItem="lex-xP-ZhA" firstAttribute="baseline" secondItem="x6Y-PW-1R1" secondAttribute="baseline" id="WSA-4w-BWf"/>
+                            <constraint firstItem="x6Y-PW-1R1" firstAttribute="leading" secondItem="lex-xP-ZhA" secondAttribute="trailing" constant="55" id="WgJ-NM-4gQ"/>
+                            <constraint firstItem="tqI-T2-5Ze" firstAttribute="trailing" secondItem="Rmr-oz-fUZ" secondAttribute="trailing" id="XNd-sc-T6o"/>
+                            <constraint firstItem="Rmr-oz-fUZ" firstAttribute="leading" secondItem="x6Y-PW-1R1" secondAttribute="trailing" constant="59" id="Yh2-Tz-yTU"/>
+                            <constraint firstItem="h1i-kf-mJq" firstAttribute="centerX" secondItem="tqI-T2-5Ze" secondAttribute="centerX" id="YxL-hE-hbf"/>
+                            <constraint firstItem="x6Y-PW-1R1" firstAttribute="baseline" secondItem="Rmr-oz-fUZ" secondAttribute="baseline" id="anv-9Z-YXy"/>
+                            <constraint firstItem="tqI-T2-5Ze" firstAttribute="top" secondItem="h1i-kf-mJq" secondAttribute="bottom" constant="30" id="tLe-dB-WrY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iy3-6w-1oT"/>
+                    <connections>
+                        <outlet property="processSlider" destination="Ri5-GD-GTX" id="Lbh-17-aBO"/>
+                        <outlet property="timeLabel" destination="h1i-kf-mJq" id="ByN-uP-JjT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="248"/>
+        </scene>
+    </scenes>
+</document>
